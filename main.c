@@ -1,16 +1,19 @@
 #include "raylib.h"
 #include "menu.h"
 #include "lane.h"
+#include "player.h"
 
 
 int main(void)
-{
-    InitWindow(700, 700, "game");
+    {InitWindow(700, 700, "Late Na Naman");
     SetTargetFPS(60);
 
     lane lanes[LANE_COUNT];
 
     GameScreen currentScreen = MENU;
+
+    Player player;
+    InitPlayer(&player, 100.0f, GetScreenHeight() - 80.0f);
 
     while (!WindowShouldClose())
     {
@@ -52,6 +55,10 @@ int main(void)
                 ClearBackground(WHITE);
                 InitLane(lanes);
                 DrawLane(lanes);
+
+                UpdatePlayer(&player, lanes);
+                DrawPlayer(player);
+
                 break;
 
         }

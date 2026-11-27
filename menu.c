@@ -9,11 +9,11 @@ Rectangle scoreButton;
 typedef struct {
     char name[20];
     int score;
-} Player;
+}PlayerScore;
 
 
 
-Player topScores[5] = {
+PlayerScore topScores[5] = {
  { "Player 1", 0 },
  { "Player 2", 0 },
  { "Player 3", 0 },
