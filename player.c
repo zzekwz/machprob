@@ -1,28 +1,41 @@
 #include "player.h"
 #include "raylib.h"
 
-void InitPlayer(Player *player, float startX, float startY) {
-    player->bounds = (Rectangle){ startX, startY, 40.0f, 40.0f };
+void InitPlayer(Player *player, const road lane[], float startY) {
+
+    player->currentLane = 1;
+
+    player->bounds.width = 60.0f;
+    player->bounds.height = 70.0f;
+
+    player->bounds.x = lane[player->currentLane].bounds.x
+                     + (lane[player->currentLane].bounds.width
+                     - player->bounds.width) / 2;
+
+    player->bounds.y = startY;
+
     player->speed = 250.0f;
     player->color = BLUE;
 }
 
-void UpdatePlayer(Player *player, const lane lanes[]) {
-    float dt = GetFrameTime();
-    if (IsKeyDown(KEY_UP)) player->bounds.y -= player->speed * dt;
-    if (IsKeyDown(KEY_LEFT)) player->bounds.x -= player->speed * dt;
-    if (IsKeyDown(KEY_DOWN)) player->bounds.y += player->speed * dt;
-    if (IsKeyDown(KEY_RIGHT)) player->bounds.x += player->speed * dt;
+void UpdatePlayer(Player *player, const road lane[]) {
 
-    float minX = lanes[0].bounds.x;
-    float maxX = (lanes[LANE_COUNT - 1].bounds.x + lanes[LANE_COUNT - 1].bounds.width) - player->bounds.width;
-    float maxY = (float)GetScreenHeight() - player->bounds.height;
+   if (IsKeyPressed(KEY_LEFT) && player->currentLane > 0)
+{
+    player->currentLane--;
+    player->bounds.x = lane[player->currentLane].bounds.x
+                     + (lane[player->currentLane].bounds.width
+                     - player->bounds.width) / 2;
+}
 
-    if (player->bounds.x < minX) player->bounds.x = minX;
-    if (player->bounds.x > maxX) player->bounds.x = maxX;
-    if (player->bounds.y < 0.0f) player->bounds.y = 0.0f;
-    if (player->bounds.y > maxY) player->bounds.y = maxY;
+if (IsKeyPressed(KEY_RIGHT) && player->currentLane < LANE_COUNT - 1)
+{
+    player->currentLane++;
 
+    player->bounds.x = lane[player->currentLane].bounds.x
+                     + (lane[player->currentLane].bounds.width
+                     - player->bounds.width) / 2;
+}
 }
 
 

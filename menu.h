@@ -1,15 +1,11 @@
 #ifndef MENU_H
 #define MENU_H
 
-typedef enum GameScreen
-{
-    MENU,
-    SCORESCREEN,
-    GAMEPLAY
-} GameScreen;
+#include"gamescreen.h"
 
 void UpdateMenu(GameScreen *currentScreen);
 void DrawMenu(void);
 void ShowScores(void);
+void GameOver(void);
 
 #endif

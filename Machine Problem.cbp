@@ -31,6 +31,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="lane.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lane.h" />
+		<Unit filename="lane.h.gch" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -38,13 +43,19 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="menu.h" />
+		<Unit filename="obstacle.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="obstacle.h">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="player.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="player.h" />
 		<Unit filename="raylib/include/raylib.h" />
 		<Unit filename="raylib/include/raymath.h" />
 		<Unit filename="raylib/include/rlgl.h" />
-		<Unit filename="test.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="test.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

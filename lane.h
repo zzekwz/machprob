@@ -7,10 +7,10 @@
 
 typedef struct {
 Rectangle bounds;
-} lane;
+} road;
 
-void InitLane(lane lanes[]);
-void DrawLane(lane lanes[]);
+void InitLane(road lanes[]);
+void DrawLane(road lanes[]);
 
 #endif
 

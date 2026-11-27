@@ -25,24 +25,62 @@
 
 1795167075 source:c:\users\zarki\onedrive\desktop\machine problem\game.c
 
-1795177202 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\main.c
+1795790490 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\main.c
 	"raylib.h"
-	"menu.h"
-	"lane.h"
+	"gamescreen.h"
 
-1795167075 c:\users\zarki\onedrive\desktop\machine problem\machine problem\menu.h
+1795788610 c:\users\zarki\onedrive\desktop\machine problem\machine problem\menu.h
+	"gamescreen.h"
 
-1795174779 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\menu.c
+1795791399 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\menu.c
 	"raylib.h"
 	"menu.h"
 
 1795171600 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\lane.h
 	"raylib.h"
 
-1795177146 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\lane.c
+1795776061 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\lane.c
 	"raylib.h"
 	"lane.h"
 
-1795171600 c:\users\zarki\onedrive\desktop\machine problem\machine problem\lane.h
+1795776023 c:\users\zarki\onedrive\desktop\machine problem\machine problem\lane.h
 	"raylib.h"
+
+1795791099 c:\users\zarki\onedrive\desktop\machine problem\machine problem\player.h
+	"raylib.h"
+	"lane.h"
+
+1795791301 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\player.c
+	"player.h"
+	"raylib.h"
+
+1795778598 c:\users\zarki\onedrive\desktop\machine problem\machine problem\obstacle.h
+	"raylib.h"
+	"lane.h"
+	"player.h"
+
+1795791099 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\obstacle.c
+	"obstacle.h"
+
+1795791399 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\gamescreen.c
+	"raylib.h"
+	"gamescreen.h"
+	"menu.h"
+	"game.h"
+
+1795788516 c:\users\zarki\onedrive\desktop\machine problem\machine problem\gamescreen.h
+
+1795791099 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\game.c
+	"raylib.h"
+	"game.h"
+
+1795790985 c:\users\zarki\onedrive\desktop\machine problem\machine problem\game.h
+	"lane.h"
+	"player.h"
+	"obstacle.h"
+
+1795790985 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\game.h
+	"lane.h"
+	"player.h"
+	"obstacle.h"
 

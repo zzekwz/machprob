@@ -1,3 +1,4 @@
+
 #ifndef PLAYER_H
 #define PLAYER_H
 
@@ -5,14 +6,14 @@
 #include "lane.h"
 
 typedef struct {
+    int currentLane;
     Rectangle bounds;
     float speed;
     Color color;
 } Player;
 
-void InitPlayer(Player *player, float startX, float startY);
-void UpdatePlayer(Player *player, const lane lanes[]);
+void InitPlayer(Player *player, const road lane[], float startY);
+void UpdatePlayer(Player *player, const road lane[]);
 void DrawPlayer(Player player);
 
 #endif
-
