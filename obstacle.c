@@ -1,40 +1,50 @@
 #include "obstacle.h"
 
-void InitObstacle(Obstacle *obs, road lanes[], float startY)
+void InitObstacle(Obstacle obs[], const road lanes[])
 {
-    obs->currentLane = GetRandomValue(0, LANE_COUNT - 1);
-
-    obs->bounds.width = 60.0f;
-    obs->bounds.height = 70.0f;
-
-    obs->bounds.x = lanes[obs->currentLane].bounds.x + (lanes[obs->currentLane].bounds.width - obs->bounds.width) / 2;
-    obs->bounds.y = startY;
-
-    obs->speed = 200.0f;
-    obs->color = RED;
-}
-
-  void UpdateObstacle(Obstacle *obs, const road lanes[])
-{
-    float dt = GetFrameTime();
-
-    obs->bounds.y += obs->speed * dt;
-
-    if (obs->bounds.y > GetScreenHeight())
+    for (int i = 0; i < MAX_OBSTACLES; i++)
     {
-        obs->currentLane = GetRandomValue(0, LANE_COUNT - 1);
+        obs[i].currentLane = GetRandomValue(0, LANE_COUNT - 1);
 
-        obs->bounds.x = lanes[obs->currentLane].bounds.x
-                      + (lanes[obs->currentLane].bounds.width
-                      - obs->bounds.width) / 2;
+        obs[i].bounds.width = 60.0f;
+        obs[i].bounds.height = 70.0f;
 
-        obs->bounds.y = -50.0f;
+        obs[i].bounds.x = lanes[obs[i].currentLane].bounds.x
+                        + (lanes[obs[i].currentLane].bounds.width
+                        - obs[i].bounds.width) / 2;
+
+        obs[i].bounds.y = -100.0f - (i * 180.0f);
+
+        obs[i].speed = 200.0f;
+        obs[i].color = RED;
     }
 }
 
-
-void DrawObstacle(Obstacle obs)
+void UpdateObstacle(Obstacle obs[], const road lanes[])
 {
-    DrawRectangleRec(obs.bounds, obs.color);
+    float dt = GetFrameTime();
+
+    for (int i = 0; i < MAX_OBSTACLES; i++)
+    {
+        obs[i].bounds.y += obs[i].speed * dt;
+
+        if (obs[i].bounds.y > GetScreenHeight())
+        {
+            obs[i].currentLane = GetRandomValue(0, LANE_COUNT - 1);
+
+            obs[i].bounds.x = lanes[obs[i].currentLane].bounds.x
+                            + (lanes[obs[i].currentLane].bounds.width
+                            - obs[i].bounds.width) / 2;
+
+            obs[i].bounds.y = -100.0f;
+        }
+    }
 }
 
+void DrawObstacle(Obstacle obs[])
+{
+    for (int i = 0; i < MAX_OBSTACLES; i++)
+    {
+        DrawRectangleRec(obs[i].bounds, obs[i].color);
+    }
+}

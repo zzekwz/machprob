@@ -54,15 +54,14 @@
 	"player.h"
 	"raylib.h"
 
-1795778598 c:\users\zarki\onedrive\desktop\machine problem\machine problem\obstacle.h
+1795833382 c:\users\zarki\onedrive\desktop\machine problem\machine problem\obstacle.h
 	"raylib.h"
 	"lane.h"
-	"player.h"
 
-1795791099 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\obstacle.c
+1795833382 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\obstacle.c
 	"obstacle.h"
 
-1795791399 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\gamescreen.c
+1795833429 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\gamescreen.c
 	"raylib.h"
 	"gamescreen.h"
 	"menu.h"
@@ -70,17 +69,24 @@
 
 1795788516 c:\users\zarki\onedrive\desktop\machine problem\machine problem\gamescreen.h
 
-1795791099 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\game.c
+1795834454 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\game.c
 	"raylib.h"
 	"game.h"
 
-1795790985 c:\users\zarki\onedrive\desktop\machine problem\machine problem\game.h
+1795834243 c:\users\zarki\onedrive\desktop\machine problem\machine problem\game.h
 	"lane.h"
 	"player.h"
 	"obstacle.h"
+	"gameclock.h"
 
 1795790985 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\game.h
 	"lane.h"
 	"player.h"
 	"obstacle.h"
+
+1795834640 source:c:\users\zarki\onedrive\desktop\machine problem\machine problem\gameclock.c
+	"gameclock.h"
+
+1795834896 c:\users\zarki\onedrive\desktop\machine problem\machine problem\gameclock.h
+	"raylib.h"
 

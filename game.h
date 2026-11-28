@@ -4,11 +4,11 @@
 #include "lane.h"
 #include "player.h"
 #include "obstacle.h"
+#include "gameclock.h"
 
-void InitGame(road lanes[], Player *player, Obstacle *obs);
-void UpdateGame(road lanes[], Player *player, Obstacle *obs);
-void DrawGame(road lanes[], Player player, Obstacle obs);
-int CheckGameOver(Player player, Obstacle obs);
+void InitGame(road lanes[], Player *player, Obstacle obs[]);
+void UpdateGame(road lanes[], Player *player, Obstacle obs[]);
+void DrawGame(road lanes[], Player player, Obstacle obs[]);
+int CheckGameOver(Player player, Obstacle obs[]);
 
 #endif
-

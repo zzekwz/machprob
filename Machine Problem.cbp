@@ -31,6 +31,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="game.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="game.h">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gamescreen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gamescreen.h">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="lane.c">
 			<Option compilerVar="CC" />
 		</Unit>

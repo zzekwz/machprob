@@ -5,7 +5,7 @@
 
 road lanes[LANE_COUNT];
 Player player;
-Obstacle obs;
+Obstacle obs[MAX_OBSTACLES];
 
 int gameInitialized = 0;
 
@@ -18,7 +18,7 @@ void UpdateScreen(GameScreen *currentScreen)
             break;
 
         case SCORESCREEN:
-            if (IsKeyPressed(KEY_ESCAPE))
+            if (IsKeyPressed(KEY_ENTER))
             {
                 *currentScreen = MENU;
             }
@@ -27,7 +27,7 @@ void UpdateScreen(GameScreen *currentScreen)
         case GAMEPLAY:
             if (!gameInitialized)
             {
-                InitGame(lanes, &player, &obs);
+                InitGame(lanes, &player, obs);
                 gameInitialized = 1;
             }
 
@@ -38,7 +38,7 @@ void UpdateScreen(GameScreen *currentScreen)
             }
             else
             {
-                UpdateGame(lanes, &player, &obs);
+                UpdateGame(lanes, &player, obs);
 
                 if (CheckGameOver(player, obs))
                 {

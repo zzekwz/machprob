@@ -3,7 +3,8 @@
 
 #include "raylib.h"
 #include "lane.h"
-#include "player.h"
+
+#define MAX_OBSTACLES 5
 
 typedef struct {
     int currentLane;
@@ -12,9 +13,8 @@ typedef struct {
     Color color;
 } Obstacle;
 
-void InitObstacle(Obstacle *obs, road lane[], float startY);
-void UpdateObstacle(Obstacle *obs, const road lanes[]);
-void DrawObstacle(Obstacle obs);
+void InitObstacle(Obstacle obs[], const road lanes[]);
+void UpdateObstacle(Obstacle obs[], const road lanes[]);
+void DrawObstacle(Obstacle obs[]);
 
 #endif
-
